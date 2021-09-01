@@ -31,9 +31,18 @@ body {
     --mainBackground: #0d2241;
     --emphatic: #00acea;
     --white: white;
-    --sectionBackground: #e3f0f8;
+    --sectionBackground: white;
     --grey: #141414;     
   }
+
+@media screen and (min-width: 1025px) {
+    :root {
+        --sectionBackground: #e3f0f8;
+      }
+    
+}
+
+
                                                   /* text */
 h1{
     font-size: 1.6rem;
@@ -55,6 +64,7 @@ h1, h2, h3{
 h3{
     text-align: center;
     margin-top: .5rem;
+    font-size: 1.5rem;
 }
 
 @media screen and (min-width: 700px){
@@ -96,33 +106,36 @@ h3{
         to {margin-top: 1.8rem;}
         }
 }
+@media screen and (min-width: 1025px){
+    @keyframes textIn {
+        from {opacity: 0; margin-top: 0;}
+        to {opacity: 1; margin-top: 40%;}
+        }
+    @keyframes textOut {
+        from {opacity: 1; margin-top: 40%;}
+        to {opacity: 0; margin-top: 0;}
+        }
+    
+    @keyframes lineIn {
+        from {opacity: 0; width: 0%;}
+        to {opacity: 1; width: 96%;}
+        }
+    @keyframes lineOut {
+        from {opacity: 1; width: 96%;}
+        to {opacity: 0; width: 0%;}
+        }
+    
+    @keyframes vLineIn {
+        from {opacity: 0; height: 0px;}
+        to {opacity: 1; height: 30px;}
+        }
+    @keyframes vLineOut {
+        from {opacity: 1; height: 30px;}
+        to {opacity: 0; height: 0px;}
+        }
+}
 
-@keyframes textIn {
-    from {opacity: 0; margin-top: 0;}
-    to {opacity: 1; margin-top: 40%;}
-    }
-@keyframes textOut {
-    from {opacity: 1; margin-top: 40%;}
-    to {opacity: 0; margin-top: 0;}
-    }
 
-@keyframes lineIn {
-    from {opacity: 0; width: 0%;}
-    to {opacity: 1; width: 96%;}
-    }
-@keyframes lineOut {
-    from {opacity: 1; width: 96%;}
-    to {opacity: 0; width: 0%;}
-    }
-
-@keyframes vLineIn {
-    from {opacity: 0; height: 0px;}
-    to {opacity: 1; height: 30px;}
-    }
-@keyframes vLineOut {
-    from {opacity: 1; height: 30px;}
-    to {opacity: 0; height: 0px;}
-    }
 
 
 
@@ -276,14 +289,15 @@ nav{
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
     left: 1rem; 
     right: 1rem; 
     /* margin: 2em; */
     z-index: 2;
     max-width: 600px;
-    top: 40%;
+    top: 45%;
     transform: translateY(-50%);
     text-align: center;
     padding: 1em;
@@ -310,21 +324,22 @@ nav{
 }
 
 .hero-text-holder h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--white);
     font-family: var(--titleFont);
-    font-weight: 300;
+    font-weight: 500;
     line-height: normal;
+    padding-bottom: 5.5rem;
 }
 
-.hero-text-holder,.hero-text-holder-small p{
+.hero-text-holder p, .hero-text-holder-small p{
     font-size: 2rem;
     color: var(--white);
     font-family: var(--subFont);
     font-weight: 300;
     line-height: normal;
-    padding: 0 0 1em 0;
-    margin: 1em 0 0 0;
+    padding: 0 0 5.5rem 0;
+    /* margin: 5rem 0 0 0; */
 }
 
 @media screen and (min-width: 1025px){
@@ -336,8 +351,16 @@ nav{
         border: 1px solid var(--emphatic);
         top: 50%;
     }
-    .hero-text-holder, .hero-text-holder-small p{
+    .hero-text-holder p, .hero-text-holder-small p{
         font-size: 1.5rem;
+    }
+    .hero-text-holder h1{
+        font-size: 2.5rem;
+        color: var(--white);
+        font-family: var(--titleFont);
+        font-weight: 500;
+        line-height: normal;
+        padding-bottom: 5.5rem;
     }
 }
 
@@ -348,15 +371,17 @@ nav{
 /* sections */
 
 .section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: var(--sectionBackground);
     min-height: 100vh;
     /* max-width: 90vw;
     margin: 0 auto; */
-    padding: 2em 5% 1em 5%;
+    padding: 3rem 1rem;
 }
 
 .section-box{
-
     min-width: 30vw;
     text-align: center;
     max-width: 600px;
@@ -377,7 +402,7 @@ nav{
 
 .headline h2{
 font-weight: 600;
-font-size: 2.3rem;
+font-size: 3.3rem;
 line-height: 140%;
 }
 
@@ -481,20 +506,44 @@ button{
 
 .section-title-large{
     margin: 0 auto;
-    padding: 2em 1em 2em 1em;
-    width: 450px;
-    border: 1px solid var(--white);
+    padding: 2em 0 2em 0;
+    width: 250px;
+    border: 2px solid var(--mainBackground);
 }
+
+@media screen and (min-width:1025px) {
+    .section-title-large{
+        border: 2px solid var(--white);
+    }  
+}
+
 .section-title-large, h2{
     font-family: 'Montserrat';
     font-weight: 600;
-
+    font-size: 3rem;
+}
+.section-title-large, p{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .flex-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
+.flex-container-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-min-width{
+    min-width: 100%;
+}
+
 
 .icon-small{
     display: flex;
@@ -544,7 +593,8 @@ button{
 .bold-paragraph-white{
     color: var(--white);
     font-family: var(--subFont);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    margin: 0 2rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -564,7 +614,6 @@ button{
 .section-box-left{
     min-width: 30vw;
     max-width: 600px;
-    margin-left: 3rem;
 }
 
 .cols-container{
@@ -572,29 +621,56 @@ button{
     flex-direction: column;
 }
 
+.col-left{
+    min-height: 50vh;
+    width: 100%;
+}
+.col-right{
+    display: none;
+}
+
 @media screen and (min-width: 1025px) {
+    .section-box-left{
+        min-width: 30vw;
+        max-width: 600px;
+        margin-left: 3rem;
+    }
+
     .cols-container{
         flex-direction: row;
     }
+    .col-left, .col-right{
+        display: inline;
+        min-height: 50vh;
+        width: 50%;
+    }
 }
 
-.col-left, .col-right{
-    min-height: 50vh;
-    width: 50%;
-}
+
 
 .col-4{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    width:25%;
+    justify-content: space-around;
+    width:100%;
     min-height: 300px;
 }
 
 .col-4 hr{
     width: 20%;
     background-color: white;
+}
+
+@media screen and (min-width: 1025px) {
+    .col-4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width:25%;
+        min-height: 300px;
+    }
 }
 
 .col-inner-col{
@@ -618,19 +694,39 @@ button{
 }
 
 .left-box{
-    text-align: left;
+    text-align: center;
     font-family: var(--subFont);
+    margin: 0 2rem;
 }
 
 .section3-headline p{
     color: var(--emphatic);
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
 }
+
 .section3-normal p{
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
 }
+
+@media screen and (min-width:1025px) {
+    .left-box{
+        text-align: left;
+        font-family: var(--subFont);
+    }
+    .section3-headline p{
+        color: var(--emphatic);
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+    .section3-normal p{
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+}
+
 
 .col-right img{
     box-sizing: border-box;
@@ -638,19 +734,40 @@ button{
 }
 
 .map{
-    width: 90%
+    display: none;
+}
+
+@media screen and (min-width:1025px) {
+    .map{
+        width: 90%
+    }
 }
 
 .small-subtitle{
     text-transform: uppercase;
     font-family: var(--titleFont);
-    font-size: .6rem;
+    font-size: 2rem;
 }
 
 .text-block{
-    padding: 1rem 2rem;
+    padding: 0rem 1rem 2rem 1rem;
     background: rgb(20,20,46);
     background: radial-gradient(circle, rgba(20,20,46,1) 0%, rgba(19,55,102,1) 0%, rgba(20,20,46,1) 100%);
+    box-sizing: border-box;
+}
+
+@media screen and (min-width:1025px) {
+
+    .small-subtitle{
+        text-transform: uppercase;
+        font-family: var(--titleFont);
+        font-size: .6rem;
+    }
+    
+
+    .text-block{
+        padding: 1rem 2rem;
+ }
 }
 
 /* footer */
@@ -662,17 +779,20 @@ footer{
 
 .footer-first{
     display: flex;
+    flex-direction: column;
 }
 
 .footer-first-col-one{
     display: flex;
-    width: 50%;
+    flex-direction: column;
+    width: 100%;
     justify-content: space-between;
 }
 
 .footer-first-col-two{
     display: flex;
-    width: 50%; 
+    flex-direction: column;
+    width: 100%; 
     justify-content: flex-end;
     align-items: center;
 }
@@ -688,7 +808,7 @@ footer{
 .footer-links p{
     text-transform: uppercase;
     color: #999;
-    padding: 0 .5rem;
+    padding: 0 2rem;
     margin-bottom: 0;
 }
 
@@ -696,7 +816,7 @@ footer{
     font-size: .8rem;
     color: var(--white);
     text-decoration: none;
-    padding: 0 .5rem;
+    padding: 0 2rem;
 }
 
 .footer-social{
@@ -740,4 +860,89 @@ footer{
 .footer-third a{
     text-decoration: none;
     margin-right: .3rem;
+}
+
+@media screen and (min-width:1025px) {
+    .footer-first{
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-first-col-one{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-between;
+    }
+    
+    .footer-first-col-two{
+        display: flex;
+        width: 50%; 
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .footer-logo{
+        padding: 1rem;
+    }
+    
+    .footer-links{
+        font-family: var(--subFont);
+    }
+    
+    .footer-links p{
+        text-transform: uppercase;
+        color: #999;
+        padding: 0 .5rem;
+        margin-bottom: 0;
+    }
+    
+    .footer-links a{
+        font-size: .8rem;
+        color: var(--white);
+        text-decoration: none;
+        padding: 0 .5rem;
+    }
+    
+    .footer-social{
+        margin-right: 3rem;
+    }
+    
+    .fab{
+        color: var(--white);
+        font-size: 2rem;
+        padding: 0 .5rem;
+    }
+    
+    .footer-second{
+        width: 60%;
+        padding-bottom: 1rem;
+    }
+    
+    .contact-details {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1rem;
+    }
+    
+    .contact-details p{
+        color: var(--white);
+        font-size: .7rem;
+        font-family: var(--subFont);
+        letter-spacing: .1rem;
+    }
+    
+    .footer-third{
+        display: flex;
+        background-color: var(--sectionBackground);
+        padding: .5rem 1rem;
+        justify-content: space-around;
+    }
+    .footer-third p{
+        font-family: var(--subFont);
+        font-size: .8rem;
+    }
+    .footer-third a{
+        text-decoration: none;
+        margin-right: .3rem;
+    }
 }
