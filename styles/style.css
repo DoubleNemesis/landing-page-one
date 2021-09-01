@@ -481,14 +481,9 @@ button{
 
 .section-title-large{
     margin: 0 auto;
-    padding: 2em 0 2em 0;
-    width: 250px;
-    /* background-image: url('../circle2White.png'); */
-    /* background-size: contain;
-    background-size: 220px;
-    background-repeat: no-repeat;
-    background-position: center; */
-    border: 2px solid var(--white);
+    padding: 2em 1em 2em 1em;
+    width: 450px;
+    border: 1px solid var(--white);
 }
 .section-title-large, h2{
     font-family: 'Montserrat';
@@ -656,4 +651,93 @@ button{
     padding: 1rem 2rem;
     background: rgb(20,20,46);
     background: radial-gradient(circle, rgba(20,20,46,1) 0%, rgba(19,55,102,1) 0%, rgba(20,20,46,1) 100%);
+}
+
+/* footer */
+
+footer{
+    background-color: var(--mainBackground);
+    padding-top: 1rem;
+}
+
+.footer-first{
+    display: flex;
+}
+
+.footer-first-col-one{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.footer-first-col-two{
+    display: flex;
+    width: 50%; 
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-logo{
+    padding: 1rem;
+}
+
+.footer-links{
+    font-family: var(--subFont);
+}
+
+.footer-links p{
+    text-transform: uppercase;
+    color: #999;
+    padding: 0 .5rem;
+    margin-bottom: 0;
+}
+
+.footer-links a{
+    font-size: .8rem;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0 .5rem;
+}
+
+.footer-social{
+    margin-right: 3rem;
+}
+
+.fab{
+    color: var(--white);
+    font-size: 2rem;
+    padding: 0 .5rem;
+}
+
+.footer-second{
+    width: 60%;
+    padding-bottom: 1rem;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+}
+
+.contact-details p{
+    color: var(--white);
+    font-size: .7rem;
+    font-family: var(--subFont);
+    letter-spacing: .1rem;
+}
+
+.footer-third{
+    display: flex;
+    background-color: var(--sectionBackground);
+    padding: .5rem 1rem;
+    justify-content: space-around;
+}
+.footer-third p{
+    font-family: var(--subFont);
+    font-size: .8rem;
+}
+.footer-third a{
+    text-decoration: none;
+    margin-right: .3rem;
 }
