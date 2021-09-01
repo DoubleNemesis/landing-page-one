@@ -278,14 +278,12 @@ nav{
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
-    left: 0; 
-    right: 0; 
-    margin: 1em;
+    left: 1rem; 
+    right: 1rem; 
+    /* margin: 2em; */
     z-index: 2;
-    border: 1px solid var(--emphatic);
     max-width: 600px;
-    /* height: 40vh;  */
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     text-align: center;
     padding: 1em;
@@ -329,21 +327,23 @@ nav{
     margin: 1em 0 0 0;
 }
 
-.emphatic{
-    color: var(--emphatic);
-}
 @media screen and (min-width: 1025px){
-        .hero-image{
-            height: 100vh;
-}
+    .hero-image{
+        height: 100vh;
+    }
     .hero-text-holder, .hero-text-holder-small{
         margin: auto;
+        border: 1px solid var(--emphatic);
+        top: 50%;
     }
     .hero-text-holder, .hero-text-holder-small p{
         font-size: 1.5rem;
     }
 }
 
+.emphatic{
+    color: var(--emphatic);
+}
 
 /* sections */
 

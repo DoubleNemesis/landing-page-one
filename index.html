@@ -239,7 +239,6 @@
 
     const getScroll = () => {
         let amountScrolled = Math.round(window.scrollY)
-        console.log(Math.round(window.scrollY))
         if (amountScrolled > 60) {
             header[0].style.backgroundColor = '#0d2241'
             header[0].style.borderBottom = '1px solid #00acea'
@@ -263,13 +262,11 @@
 
     Array.from(iconsList).forEach(function (element) {
         element.addEventListener('mouseenter', function (e) {
-            console.log(e.target.children[3])
             e.target.children[1].style.animation = 'lineIn .5s forwards'
             e.target.children[2].style.animation = 'vLineIn .5s forwards'
             e.target.children[3].style.animation = 'textIn .5s forwards'
         })
         element.addEventListener('mouseleave', function (e) {
-            // console.log(e.target.children[1])
             e.target.children[1].style.animation = 'lineOut .5s'
             e.target.children[2].style.animation = 'vLineOut .5s'
             e.target.children[3].style.animation = 'textOut .5s'
