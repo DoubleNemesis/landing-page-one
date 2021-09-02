@@ -47,6 +47,7 @@
         <div class="hero-text-holder">
             <h1>With you <span class="emphatic">every</span> step of the<br>way</h1>
             <p>Global <span class="emphatic">solutions</span> for IT professionals in an uncertain world</p>
+           <button class="arrow-holder">see where we work<br>&#8595;</button>
         </div>
     </section>
     <main>
@@ -89,48 +90,55 @@
                         alike. It’s made to measure advice and consulting that goes beyond what’s just expected. </p>
                 </div>
                 <div class="section-box-wide flex-container">
-                    <div class="icon-small">
-                        <img src="cloud.svg" alt="cloud">
-                        <hr />
-                        <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">cloud text</p>
-                    </div>
-                    <div class="icon-small">
-                        <img src="cert.svg" alt="cloud">
-                        <hr />
-                        <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">cert text</p>
-                    </div>
-                    <div class="icon-small">
-                        <img src="security.svg" alt="cloud">
-                        <hr />
-                        <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">security text</p>
-                    </div>
-                    <div class="icon-small">
-                        <img src="code.svg" alt="cloud">
-                        <hr />
-                        <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">code text</p>
-                    </div>
-                    <div class="icon-small">
-                        <img src="graph.svg" alt="cloud">
-                        <hr />
-                        <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">graph text</p>
-                    </div>
-                    <div class="icon-small">
-                        <img src="infrastructure.svg" alt="cloud">
-                        <hr />
-                        <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">inf text</p>
-                    </div>
-                    <div class="icon-small">
+                    <!-- <div class="icon-small">
+                        <div class="icon-label">Enterprise</div>
                         <img src="transformation.svg" alt="cloud">
                         <hr />
                         <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">trans text</p>
+                        <p class="hidden-icon-text">Enterprise</p>
+                    </div> -->
+                    <div class="icon-small">
+                        <div class="icon-label">Cloud</div>
+                        <img src="cloud.svg" alt="cloud">
+                        <hr />
+                        <div class="vertical-line"></div>
+                        <p class="hidden-icon-text">Cloud Architecture / Serverless / Distributed</p>
                     </div>
+                    <div class="icon-small">
+                        <div class="icon-label">Certification</div>
+                        <img src="cert.svg" alt="cloud">
+                        <hr />
+                        <div class="vertical-line"></div>
+                        <p class="hidden-icon-text">Certification / Assessment / Technical SKills</p>
+                    </div>
+                    <div class="icon-small">
+                        <div class="icon-label">Security</div>
+                        <img src="security.svg" alt="cloud">
+                        <hr />
+                        <div class="vertical-line"></div>
+                        <p class="hidden-icon-text">Security Consulting / Auditing / Cryptography</p>
+                    </div>
+                    <div class="icon-small">
+                        <div class="icon-label">Coding</div>
+                        <img src="code.svg" alt="cloud">
+                        <hr />
+                        <div class="vertical-line"></div>
+                        <p class="hidden-icon-text">JavaScript / Ruby / PHP / NodeJS</p>
+                    </div>
+                    <div class="icon-small">
+                        <div class="icon-label">Analysis</div>
+                        <img src="graph.svg" alt="cloud">
+                        <hr />
+                        <div class="vertical-line"></div>
+                        <p class="hidden-icon-text">Analysis / Stats / Traffic / SEO</p>
+                    </div>
+                    <!-- <div class="icon-small">
+                        <div class="icon-label">Enterprise</div>
+                        <img src="infrastructure.svg" alt="cloud">
+                        <hr />
+                        <div class="vertical-line"></div>
+                        <p class="hidden-icon-text">Physical Infrastructure</p>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -315,14 +323,14 @@
 
     Array.from(iconsList).forEach(function (element) {
         element.addEventListener('mouseenter', function (e) {
-            e.target.children[1].style.animation = 'lineIn .5s forwards'
-            e.target.children[2].style.animation = 'vLineIn .5s forwards'
-            e.target.children[3].style.animation = 'textIn .5s forwards'
+            e.target.children[2].style.animation = 'lineIn .5s forwards'
+            e.target.children[3].style.animation = 'vLineIn .5s forwards'
+            e.target.children[4].style.animation = 'textIn .5s forwards'
         })
         element.addEventListener('mouseleave', function (e) {
-            e.target.children[1].style.animation = 'lineOut .5s'
-            e.target.children[2].style.animation = 'vLineOut .5s'
-            e.target.children[3].style.animation = 'textOut .5s'
+            e.target.children[2].style.animation = 'lineOut .5s'
+            e.target.children[3].style.animation = 'vLineOut .5s'
+            e.target.children[4].style.animation = 'textOut .5s'
         })
     })
 
