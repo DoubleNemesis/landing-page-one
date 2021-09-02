@@ -47,7 +47,7 @@
         <div class="hero-text-holder">
             <h1>With you <span class="emphatic">every</span> step of the<br>way</h1>
             <p>Global <span class="emphatic">solutions</span> for IT professionals in an uncertain world</p>
-           <button class="arrow-holder">see where we work<br>&#8595;</button>
+           <button class="arrow-holder" id="arrow-button">see where we work<br>&#8595;</button>
         </div>
     </section>
     <main>
@@ -70,19 +70,17 @@
                 <div class="section-box">
                     <button class="emphatic-button">What we do differently</button>
                 </div>
-                <div class="section-box">
+                <div class="section-box" >
                     <button class="normal-button">Meet the players</button>
                 </div>
-
+                <div id="scroll-to-here"></div>
             </div>
         </section>
-        <section>
-            <div class="section-dark">
+        <section class="section-dark">
                 <div class="section-box-wide">
                     <div class="section-title-large">
                         <h2>Respected across the sector</h2>
                     </div>
-                    <!-- icon -->
                 </div>
                 <div class="section-box">
                     <p class="bold-paragraph-white">
@@ -90,13 +88,6 @@
                         alike. It’s made to measure advice and consulting that goes beyond what’s just expected. </p>
                 </div>
                 <div class="section-box-wide flex-container">
-                    <!-- <div class="icon-small">
-                        <div class="icon-label">Enterprise</div>
-                        <img src="transformation.svg" alt="cloud">
-                        <hr />
-                        <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">Enterprise</p>
-                    </div> -->
                     <div class="icon-small">
                         <div class="icon-label">Cloud</div>
                         <img src="cloud.svg" alt="cloud">
@@ -132,15 +123,7 @@
                         <div class="vertical-line"></div>
                         <p class="hidden-icon-text">Analysis / Stats / Traffic / SEO</p>
                     </div>
-                    <!-- <div class="icon-small">
-                        <div class="icon-label">Enterprise</div>
-                        <img src="infrastructure.svg" alt="cloud">
-                        <hr />
-                        <div class="vertical-line"></div>
-                        <p class="hidden-icon-text">Physical Infrastructure</p>
-                    </div> -->
                 </div>
-            </div>
         </section>
         <section class="section3">
             <div class="section-box-wide">
@@ -285,19 +268,15 @@
 
 
 
-
-
-
-
-
-
-
-
 <script>
     const header = document.getElementsByTagName('header')
     const logo = document.getElementsByClassName('logo')
+    const arrowButton = document.getElementById('arrow-button')
+    const scrollTarget = document.getElementById('scroll-to-here')
     let isScrolledDown = false;
 
+
+//header scroll effect   
     const getScroll = () => {
         let amountScrolled = Math.round(window.scrollY)
         if (amountScrolled > 60) {
@@ -319,6 +298,13 @@
 
     window.addEventListener('scroll', getScroll)
 
+//hero button scroll down
+
+arrowButton.addEventListener('click', function(){
+    scrollTarget.scrollIntoView(true)
+})
+
+//icons animation on hover
     const iconsList = document.getElementsByClassName('icon-small')
 
     Array.from(iconsList).forEach(function (element) {

@@ -2,6 +2,7 @@
 html{
     width: 100%;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 700px){
@@ -584,11 +585,12 @@ button{
 }
 @media screen and (min-width:1025px) {
     .section-title-large{
-        border: 2px solid var(--white);
+        /* border: 2px solid var(--white); */
     }  
     .section-dark{
         background-color: var(--mainBackground);
         color: white;
+        height: 100vh;
         padding-top: 2rem;
         padding-bottom: 4rem;
     }
