@@ -303,26 +303,43 @@ color: var(--emphatic)
     justify-content: center;
 }
 
+
 .menu-block{
-width: 45%;
-}
+    width: 90%;
+    }
+
+
+
+
 
 .menu-block ul li{
 color: var(--white);
 font-family: var(--subFont);
 list-style: none;
+font-size: 1.4rem;
 }
 
 .hidden-menu-title h2{
     font-family: var(--titleFont);
-    font-size: .8rem;
+    font-size: 1.8rem;
     color: var(--white);
     padding: .5rem;
 
 }
 
+@media screen and (min-width:700px){
 
+    .menu-block{
+        width: 45%;
+        }
 
+    .hidden-menu-title h2{
+            font-family: var(--titleFont);
+            font-size: .8rem;
+            color: var(--white);
+            padding: .5rem;    
+        }
+    }
                                             /* hero */
 
 .hero {
@@ -398,7 +415,7 @@ list-style: none;
 }
 
 .hero-text-holder h1{
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     color: var(--white);
     font-family: var(--titleFont);
     font-weight: 500;
