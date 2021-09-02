@@ -7,5 +7,3 @@ Photo by <a href="https://unsplash.com/@scottiewarman?utm_source=unsplash&utm_me
   to do
 
 menu page
-add links
-add link down button end of hero
