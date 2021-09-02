@@ -75,6 +75,7 @@ a{
 a:hover{
     text-decoration: underline;
     color: white;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 700px){
@@ -99,6 +100,11 @@ a:hover{
 @keyframes goDown {
     from {margin-top: 2.5rem;}
     to {margin-top: 3.2rem;}
+    }
+
+    @keyframes menuIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
     }
 
 
@@ -244,6 +250,11 @@ nav{
     text-transform: uppercase;
     letter-spacing: .65rem;
     font-weight: 300;
+    cursor: pointer;
+}
+
+.burger:hover{
+    color: var(--emphatic)
 }
 
 @media screen and (min-width: 700px){
@@ -252,6 +263,69 @@ nav{
         letter-spacing: .25rem;
     } 
 }
+
+                                            /* hidden menu */
+
+.hidden-menu{
+    position: absolute;
+    display: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#010F52, #034FA6);
+    margin: 0;
+    animation: menuIn 1s forwards;
+}
+
+.menu-close-x-container{
+min-width: 100%;
+text-align: right;
+}
+
+.menu-close-x-container button{
+margin: 1rem;
+color: var(--white);
+background-color: transparent;
+border: none;
+font-family: var(--titleFont);
+font-size: 2rem;
+padding: .3rem 2rem;
+}
+
+.menu-close-x-container button:hover{
+color: var(--emphatic)
+}
+
+.menu-block-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-block{
+width: 45%;
+/* border: 1px solid white; */
+}
+
+.menu-block ul li{
+color: var(--white);
+font-family: var(--subFont);
+list-style: none;
+}
+
+.hidden-menu-title h2{
+    font-family: var(--titleFont);
+    font-size: .8rem;
+    color: var(--white);
+    padding: .5rem;
+
+}
+
+
 
                                             /* hero */
 
@@ -376,8 +450,11 @@ nav{
     }
     .hero-text-holder, .hero-text-holder-small{
         margin: auto;
-        /* border: 1px solid var(--emphatic); */
         top: 50%;
+    }
+    
+    .hero-small-buttons-container{
+        margin-top: 2rem;
     }
 
     .hero-text-holder{
@@ -408,7 +485,6 @@ nav{
         font-size: .8rem;
         background-color: transparent;
         border: none;
-        cursor: pointer;
         margin-top: 4rem;
     }
     
@@ -974,7 +1050,7 @@ footer{
 }
 .footer-third p{
     font-family: var(--subFont);
-    font-size: .8rem;
+    font-size: .6rem;
 }
 .footer-third a{
     text-decoration: none;

@@ -40,10 +40,53 @@
                 <a href="#"><img src="magnifying.png" alt="search"></a>
             </div>
             <Nav>
-                <div class="burger">|||</div>
+                <div class="burger" id="burger">|||</div>
             </Nav>
         </div>
     </header>
+    <section class="hidden-menu" id="hidden-menu">
+<div class="menu-close-x-container">
+    <button onClick="closeMenu()">X</button>
+</div>
+<div class="menu-block-container">
+    <div class="menu-block">
+        <div class="hidden-menu-title"><h2>Services</h2></div>
+        <ul>
+        <li><a>Security</a></li>
+        <li><a>Greenfield</a></li>
+        <li><a>Saas</a></li>
+        <li><a>Cloud</a></li>
+    </ul>
+    </div>
+    <div class="menu-block">
+        <div class="hidden-menu-title"><h2>Prospects</h2></div>
+        <ul>
+        <li><a>Jobs</a></li>
+        <li><a>Freelance</a></li>
+        <li><a>Clients</a></li>
+        <li><a>History</a></li>
+    </ul>
+    </div>
+    <div class="menu-block">
+        <div class="hidden-menu-title"><h2>News</h2></div>
+        <ul>
+        <li><a>Projects</a></li>
+        <li><a>Prospects</a></li>
+        <li><a>Developments</a></li>
+        <li><a>Outcomes</a></li>
+    </ul>
+    </div>
+    <div class="menu-block">
+        <div class="hidden-menu-title"><h2>Contacts</h2></div>
+        <ul>
+        <li><a>Us</a></li>
+        <li><a>Portfolio</a></li>
+        <li><a>Localities</a></li>
+        <li><a>HQ</a></li>
+    </ul>
+    </div>
+</div>
+    </section>
     <section class="hero">
         <div class="hero-image"></div>
         <div class="hero-text-holder">
@@ -212,7 +255,7 @@
             <div class="hero-text-holder-small">
                 <p>We're the best in the business. <span class="emphatic">We will get you to where you want to
                         be.</span> Full stop.</p>
-                <div>
+                <div class="hero-small-buttons-container">
                     <button class="normal-button-white-border buttons-min-width">get notifications</button>
                     <button class="normal-button-white-border buttons-min-width">Ask us anything</button>
                 </div>
@@ -256,7 +299,7 @@
                 </div>
             </div>
             <div class="footer-third">
-                <p>Website build: <a href="thomaspchant.com">thomaspchant.com</a></p>
+                <p>Website: <a href="thomaspchant.com">thomaspchant.com</a></p>
                 <p>
                     <a href="thomaspchant.com">Terms</a>
                     <a href="thomaspchant.com">Contact</a>
@@ -275,6 +318,8 @@
     const logo = document.getElementsByClassName('logo')
     const arrowButton = document.getElementById('arrow-button')
     const scrollTarget = document.getElementById('scroll-to-here')
+    const hiddenMenu = document.getElementById('hidden-menu')
+    const burger = document.getElementById('burger')
     let isScrolledDown = false;
 
 
@@ -299,6 +344,17 @@
     }
 
     window.addEventListener('scroll', getScroll)
+
+// show / hide menu
+
+burger.addEventListener('click', function(){ 
+    hiddenMenu.style.display = "inline"
+})
+
+function closeMenu(){
+    hiddenMenu.style.display = 'none'
+}
+
 
 //hero button scroll down
 
