@@ -1,23 +1,4 @@
                                                     /* Global */
-/* html{
-    width: 100%;
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
-@media screen and (min-width: 700px){
-    html{
-        font-size: 110%;
-    } 
-}
-
-@media screen and (min-width: 1025px){
-    html{
-        font-size: 120%;
-    } 
-} */
-
-
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -335,10 +316,6 @@ color: var(--emphatic)
     width: 90%;
     }
 
-
-
-
-
 .menu-block ul li{
 color: var(--white);
 font-family: var(--subFont);
@@ -387,10 +364,9 @@ font-size: 1.4rem;
         background-size: cover;
         background-position: 0% 0%;
         width: 100%;
-        opacity: .6;
-        filter: brightness(.6) contrast(1) grayscale(1);
+		opacity: 0.5;
+		filter: brightness(.6) contrast(.8) grayscale(.7);
         z-index: 0;
-
 }
 
 .hero-over {
@@ -401,8 +377,7 @@ font-size: 1.4rem;
     height: 100vh;
     min-height: 100vh;
     background-color: midnightblue;
-    opacity: 0.4;
-    z-index: 0;
+    z-index: -1;
 }
 
 .hero-text-layer {
